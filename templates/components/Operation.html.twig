@@ -1,0 +1,16 @@
+<div {{ attributes }}>
+
+    <input type="number" data-model="input1">
+
+    <select data-model="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+    </select>
+
+    <input type="number" data-model="input2">
+
+    <div id="result">
+        {{ this.input1 }} {{ this.operator }} {{ this.input2 }} = {{ this.result }}
+    </div>
+</div>
