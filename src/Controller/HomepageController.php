@@ -8,12 +8,22 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
-#[Route('/', name: 'homepage')]
+#[Route('/{op}/{input1}/{input2}', name: 'homepage')]
 class HomepageController extends AbstractController
 {
-    public function __invoke(): Response
-    {
-        return $this->render('base.html.twig');
+    public function __invoke(
+        string $op = '+',
+        int $input1 = 0,
+        int $input2 = 0
+    ): Response {
+        return $this->render(
+            'base.html.twig',
+            [
+                'operator' => $op,
+                'input1' => $input1,
+                'input2' => $input2,
+            ]
+        );
     }
 
 }

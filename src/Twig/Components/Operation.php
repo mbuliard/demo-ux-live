@@ -7,13 +7,14 @@ namespace App\Twig\Components;
 use Symfony\UX\LiveComponent\Attribute\AsLiveComponent;
 use Symfony\UX\LiveComponent\Attribute\LiveProp;
 use Symfony\UX\LiveComponent\DefaultActionTrait;
+use Symfony\UX\LiveComponent\Metadata\UrlMapping;
 
 #[AsLiveComponent]
 class Operation
 {
     use DefaultActionTrait;
 
-    #[LiveProp(writable: true, url: true)]
+    #[LiveProp(writable: true, url: new UrlMapping('op'))]
     public string $operator = '+';
 
     #[LiveProp(writable: true, url: true)]
@@ -21,6 +22,12 @@ class Operation
 
     #[LiveProp(writable: true, url: true)]
     public int $input2 = 0;
+
+    #[LiveProp(writable: true, url: true)]
+    public int $input3 = 0;
+
+    #[LiveProp(writable: true)]
+    public int $input4 = 0;
 
     public function result(): int
     {

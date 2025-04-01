@@ -13,4 +13,14 @@
     <div id="result">
         {{ this.input1 }} {{ this.operator }} {{ this.input2 }} = {{ this.result }}
     </div>
+
+    <div>
+        <p>LiveProp writable, in url, but not in route :</p>
+        <input type="number" data-model="input3"> = {{ this.input3 }}
+    </div>
+
+    <div>
+        <p>LiveProp writable, but not in url :</p>
+        <input type="number" data-model="input4"> = {{ this.input4 }}
+    </div>
 </div>

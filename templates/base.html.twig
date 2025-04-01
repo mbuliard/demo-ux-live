@@ -15,7 +15,11 @@
         {% block body %}
             BONJOUR
             <div>
-                <twig:Operation />
+                <twig:Operation
+                        operator="{{ operator }}"
+                        input1="{{ input1 }}"
+                        input2="{{ input2 }}"
+                />
             </div>
         {% endblock %}
     </body>
