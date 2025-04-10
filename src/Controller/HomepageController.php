@@ -16,14 +16,7 @@ class HomepageController extends AbstractController
         int $input1 = 0,
         int $input2 = 0
     ): Response {
-        return $this->render(
-            'base.html.twig',
-            [
-                'operator' => $op,
-                'input1' => $input1,
-                'input2' => $input2,
-            ]
-        );
+        return $this->render('base.html.twig');
     }
 
 }

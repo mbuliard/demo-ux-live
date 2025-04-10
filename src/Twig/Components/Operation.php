@@ -14,13 +14,13 @@ class Operation
 {
     use DefaultActionTrait;
 
-    #[LiveProp(writable: true, url: new UrlMapping('op'))]
+    #[LiveProp(writable: true, url: new UrlMapping('op', true))]
     public string $operator = '+';
 
-    #[LiveProp(writable: true, url: true)]
+    #[LiveProp(writable: true, url: new UrlMapping(mapPath: true))]
     public int $input1 = 0;
 
-    #[LiveProp(writable: true, url: true)]
+    #[LiveProp(writable: true, url: new UrlMapping(mapPath: true))]
     public int $input2 = 0;
 
     #[LiveProp(writable: true, url: true)]

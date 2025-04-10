@@ -15,11 +15,15 @@
         {% block body %}
             BONJOUR
             <div>
-                <twig:Operation
-                        operator="{{ operator }}"
-                        input1="{{ input1 }}"
-                        input2="{{ input2 }}"
-                />
+                <twig:Operation />
+            </div>
+
+
+            <div>
+                <p>
+                    Does it keep non-mapped parameters and anchors ?
+                    <a href="?toto=tata#titi">Let's find out !</a>
+                </p>
             </div>
         {% endblock %}
     </body>
